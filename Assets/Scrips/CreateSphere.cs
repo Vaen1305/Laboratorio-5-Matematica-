@@ -7,10 +7,11 @@ public class CreateSphere : MonoBehaviour
     public Vector3 translation = Vector3.zero;
     public Vector3 scale = Vector3.one;
     public float sphereRadius = 0.5f;
-    public int resolution = 256;
+    public int vertex = 256;
 
     void OnDrawGizmos()
     {
+        int resolution = Mathf.RoundToInt(Mathf.Sqrt(vertex));
         Vector3[] vertices = new Vector3[(resolution + 1) * resolution];
 
         for (int i = 0; i <= resolution; ++i)
@@ -37,10 +38,10 @@ public class CreateSphere : MonoBehaviour
         }
 
         Gizmos.color = Color.white;
-        DrawLine(vertices);
+        DrawLine(vertices, resolution);
     }
 
-    void DrawLine(Vector3[] vertices)
+    void DrawLine(Vector3[] vertices, int resolution)
     {
         for (int i = 0; i <= resolution; ++i)
         {

@@ -202,7 +202,7 @@ MonoBehaviour:
   translation: {x: 0, y: 0, z: 0}
   scale: {x: 1, y: 1, z: 1}
   sphereRadius: 0.77
-  resolution: 21
+  vertex: 256
 --- !u!4 &634571248
 Transform:
   m_ObjectHideFlags: 0
